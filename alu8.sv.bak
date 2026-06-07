@@ -1,0 +1,121 @@
+// Project: 8-bit ALU
+// Author: Aiden Huang
+// Date: 2026-06-02
+// Description: Top-level modular 8-bit ALU with arithmetic, logic, passthrough, and display output.
+// Sources used: Course project prompt and SystemVerilog language reference.
+
+module alu8 (
+    input  logic [7:0] a,
+    input  logic [7:0] b,
+    input  logic [2:0] opcode,
+    input  logic       enable,
+    input  logic       reset_n,
+    output logic [7:0] result,
+    output logic       carry,
+    output logic       overflow,
+    output logic [13:0] display
+);
+
+    logic sel_add;
+    logic sel_sub;
+    logic sel_and;
+    logic sel_or;
+    logic sel_xor;
+    logic sel_pass_a;
+    logic sel_pass_b;
+    logic sel_not_a;
+
+    logic [7:0] add_result;
+    logic [7:0] sub_result;
+    logic [7:0] and_result;
+    logic [7:0] or_result;
+    logic [7:0] xor_result;
+    logic [7:0] not_a_result;
+    logic       add_carry;
+    logic       sub_carry;
+    logic       add_overflow;
+    logic       sub_overflow;
+
+    opcode_decoder decoder (
+        .opcode(opcode),
+        .sel_add(sel_add),
+        .sel_sub(sel_sub),
+        .sel_and(sel_and),
+        .sel_or(sel_or),
+        .sel_xor(sel_xor),
+        .sel_pass_a(sel_pass_a),
+        .sel_pass_b(sel_pass_b),
+        .sel_not_a(sel_not_a)
+    );
+
+    add_sub_unit adder (
+        .a(a),
+        .b(b),
+        .subtract(1'b0),
+        .result(add_result),
+        .carry(add_carry),
+        .overflow(add_overflow)
+    );
+
+    add_sub_unit subtractor (
+        .a(a),
+        .b(b),
+        .subtract(1'b1),
+        .result(sub_result),
+        .carry(sub_carry),
+        .overflow(sub_overflow)
+    );
+
+    and_op and_unit (
+        .a(a),
+        .b(b),
+        .y(and_result)
+    );
+
+    or_op or_unit (
+        .a(a),
+        .b(b),
+        .y(or_result)
+    );
+
+    xor_op xor_unit (
+        .a(a),
+        .b(b),
+        .y(xor_result)
+    );
+
+    not_a_op not_a_unit (
+        .a(a),
+        .y(not_a_result)
+    );
+
+    output_handler outputs (
+        .enable(enable),
+        .reset_n(reset_n),
+        .sel_add(sel_add),
+        .sel_sub(sel_sub),
+        .sel_and(sel_and),
+        .sel_or(sel_or),
+        .sel_xor(sel_xor),
+        .sel_pass_a(sel_pass_a),
+        .sel_pass_b(sel_pass_b),
+        .sel_not_a(sel_not_a),
+        .add_result(add_result),
+        .sub_result(sub_result),
+        .and_result(and_result),
+        .or_result(or_result),
+        .xor_result(xor_result),
+        .pass_a_result(a),
+        .pass_b_result(b),
+        .not_a_result(not_a_result),
+        .add_carry(add_carry),
+        .sub_carry(sub_carry),
+        .add_overflow(add_overflow),
+        .sub_overflow(sub_overflow),
+        .result(result),
+        .carry(carry),
+        .overflow(overflow),
+        .display(display)
+    );
+
+endmodule
