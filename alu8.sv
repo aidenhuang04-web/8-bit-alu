@@ -1,6 +1,6 @@
 // Project: 8-bit ALU
 // Author: Aiden Huang
-// Date: 2026-06-02
+// Date: 2026-06-06
 // Description: Top-level modular 8-bit ALU with arithmetic, logic, passthrough, and display output.
 // Sources used: Course project prompt and SystemVerilog language reference.
 
