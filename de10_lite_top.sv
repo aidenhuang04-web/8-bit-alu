@@ -1,4 +1,7 @@
 // Project: 8-bit ALU
+// Author: Aiden Huang
+// Date: 2026-06-06
+// Project: 8-bit ALU
 // Description: DE10-Lite board wrapper for the reusable alu8 module.
 
 module de10_lite_top (
