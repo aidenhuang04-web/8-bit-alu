@@ -6,299 +6,159 @@
 # vlib work
 # vlog -sv ../src/opcode_decoder.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:13 on Jun 06,2026
+# Start time: 17:51:30 on Jun 06,2026
 # vlog -reportprogress 300 -sv ../src/opcode_decoder.sv 
-# -- Compiling module opcode_decoder
-# 
-# Top level modules:
-# 	opcode_decoder
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/and_op.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:14 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/and_op.sv 
-# -- Compiling module and_op
-# 
-# Top level modules:
-# 	and_op
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/or_op.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:14 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/or_op.sv 
-# -- Compiling module or_op
-# 
-# Top level modules:
-# 	or_op
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/xor_op.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:14 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/xor_op.sv 
-# -- Compiling module xor_op
-# 
-# Top level modules:
-# 	xor_op
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/not_a_op.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:14 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/not_a_op.sv 
-# -- Compiling module not_a_op
-# 
-# Top level modules:
-# 	not_a_op
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/add_sub_unit.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:14 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/add_sub_unit.sv 
-# -- Compiling module add_sub_unit
-# 
-# Top level modules:
-# 	add_sub_unit
-# End time: 17:24:14 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/display_hex.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:15 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/display_hex.sv 
-# -- Compiling module display_hex
-# 
-# Top level modules:
-# 	display_hex
-# End time: 17:24:15 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/output_handler.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:15 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/output_handler.sv 
-# -- Compiling module output_handler
-# 
-# Top level modules:
-# 	output_handler
-# End time: 17:24:15 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/alu8.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:15 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/alu8.sv 
-# -- Compiling module alu8
-# 
-# Top level modules:
-# 	alu8
-# End time: 17:24:15 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv alu8_tb.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:24:15 on Jun 06,2026
-# vlog -reportprogress 300 -sv alu8_tb.sv 
-# -- Compiling module alu8_tb
-# 
-# Top level modules:
-# 	alu8_tb
-# End time: 17:24:15 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -voptargs=+acc work.alu8_tb
-# vsim -voptargs="+acc" work.alu8_tb 
-# Start time: 17:24:15 on Jun 06,2026
-# Loading sv_std.std
-# Loading work.alu8_tb
-# Loading work.alu8
-# Loading work.opcode_decoder
-# Loading work.add_sub_unit
-# Loading work.and_op
-# Loading work.or_op
-# Loading work.xor_op
-# Loading work.not_a_op
-# ** Error: (vsim-3033) Instantiation of 'shift_unit' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /alu8_tb/dut File: ../src/alu8.sv Line: 95
-#         Searched libraries:
-#             C:/Users/User/Downloads/8-bit-alu-project-code-only (1)/sim/work
-# Loading work.output_handler
-# Loading work.display_hex
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./run_alu8.do PAUSED at line 20
-vlog -sv ../src/shift_unit.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:25:57 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/shift_unit.sv 
-# -- Compiling module shift_unit
-# 
-# Top level modules:
-# 	shift_unit
-# End time: 17:25:57 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -voptargs=+acc work.alu8_tb
-# vsim -voptargs="+acc" work.alu8_tb 
-# Start time: 17:24:15 on Jun 06,2026
-# Loading sv_std.std
-# Loading work.alu8_tb
-# Loading work.alu8
-# Loading work.opcode_decoder
-# Loading work.add_sub_unit
-# Loading work.and_op
-# Loading work.or_op
-# Loading work.xor_op
-# Loading work.not_a_op
-# Loading work.shift_unit
-# Loading work.output_handler
-# Loading work.display_hex
-run -all
-# PASS reset active       result=00 carry=0 overflow=0 display=10000001000000
-# PASS enable low         result=00 carry=0 overflow=0 display=10000001000000
-# PASS add basic          result=46 carry=0 overflow=0 display=00110010000010
-# PASS add carry          result=00 carry=1 overflow=0 display=10000001000000
-# PASS add overflow       result=80 carry=0 overflow=1 display=00000001000000
-# PASS sub basic          result=1b carry=1 overflow=0 display=11110010000011
-# PASS sub borrow         result=e5 carry=0 overflow=0 display=00001100010010
-# PASS sub overflow       result=7f carry=1 overflow=1 display=11110000001110
-# PASS and operation      result=30 carry=0 overflow=0 display=01100001000000
-# PASS or operation       result=fc carry=0 overflow=0 display=00011101000110
-# PASS xor operation      result=cc carry=0 overflow=0 display=10001101000110
-# PASS pass operand a     result=5a carry=0 overflow=0 display=00100100001000
-# PASS not operand a      result=f0 carry=0 overflow=0 display=00011101000000
-# PASS shift left         result=02 carry=0 overflow=0 display=10000000100100
-# All 14 ALU tests passed.
-# ** Note: $finish    : alu8_tb.sv(103)
-#    Time: 160 ns  Iteration: 0  Instance: /alu8_tb
-# 1
-# Break in Module alu8_tb at alu8_tb.sv line 103
+# ** Error: (vlog-7) Failed to open design unit file "../src/opcode_decoder.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 17:51:30 on Jun 06,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: D:/ModelSim/modelsim_ase/win32aloem/vlog failed.
+# Error in macro C:\Users\Aiden Huang\Documents\Codex\2026-06-06\git-aidenhuang04-web-8-bit-alu\work\8-bit-alu\run_alu8.do line 9
+# D:/ModelSim/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../src/opcode_decoder.sv"
+# Load canceled
 do run_alu8.do
-# transcript file alu8_transcript.txt
-# transcript on
 # 
 # if {[file exists work]} {
 #     vdel -lib work -all
 # }
-# Error 31: Unable to unlink file "C:/Users/User/Downloads/8-bit-alu-project-code-only (1)/sim/work/_lib.qdb".
-# Error 133: Unable to remove directory "C:/Users/User/Downloads/8-bit-alu-project-code-only (1)/sim/work".
 # 
 # vlib work
 # vlog -sv ../src/opcode_decoder.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:20 on Jun 06,2026
+# Start time: 17:53:00 on Jun 06,2026
 # vlog -reportprogress 300 -sv ../src/opcode_decoder.sv 
+# ** Error: (vlog-7) Failed to open design unit file "../src/opcode_decoder.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 17:53:00 on Jun 06,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: D:/ModelSim/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./run_alu8.do line 9
+# D:/ModelSim/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../src/opcode_decoder.sv"
+do run_alu8.do
+# 
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# 
+# vlib work
+# vlog -sv opcode_decoder.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 17:55:03 on Jun 06,2026
+# vlog -reportprogress 300 -sv opcode_decoder.sv 
 # -- Compiling module opcode_decoder
 # 
 # Top level modules:
 # 	opcode_decoder
-# End time: 17:29:20 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:03 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/and_op.sv
+# vlog -sv and_op.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:20 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/and_op.sv 
+# Start time: 17:55:03 on Jun 06,2026
+# vlog -reportprogress 300 -sv and_op.sv 
 # -- Compiling module and_op
 # 
 # Top level modules:
 # 	and_op
-# End time: 17:29:20 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:03 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/or_op.sv
+# vlog -sv or_op.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:20 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/or_op.sv 
+# Start time: 17:55:03 on Jun 06,2026
+# vlog -reportprogress 300 -sv or_op.sv 
 # -- Compiling module or_op
 # 
 # Top level modules:
 # 	or_op
-# End time: 17:29:20 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:03 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/xor_op.sv
+# vlog -sv xor_op.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:20 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/xor_op.sv 
+# Start time: 17:55:03 on Jun 06,2026
+# vlog -reportprogress 300 -sv xor_op.sv 
 # -- Compiling module xor_op
 # 
 # Top level modules:
 # 	xor_op
-# End time: 17:29:20 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:03 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/not_a_op.sv
+# vlog -sv not_a_op.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:21 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/not_a_op.sv 
+# Start time: 17:55:03 on Jun 06,2026
+# vlog -reportprogress 300 -sv not_a_op.sv 
 # -- Compiling module not_a_op
 # 
 # Top level modules:
 # 	not_a_op
-# End time: 17:29:21 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/add_sub_unit.sv
+# vlog -sv add_sub_unit.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:21 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/add_sub_unit.sv 
+# Start time: 17:55:04 on Jun 06,2026
+# vlog -reportprogress 300 -sv add_sub_unit.sv 
 # -- Compiling module add_sub_unit
 # 
 # Top level modules:
 # 	add_sub_unit
-# End time: 17:29:21 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../src/display_hex.sv
+# vlog -sv shift_unit.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:21 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/display_hex.sv 
-# -- Compiling module display_hex
-# 
-# Top level modules:
-# 	display_hex
-# End time: 17:29:21 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/output_handler.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:21 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/output_handler.sv 
-# -- Compiling module output_handler
-# 
-# Top level modules:
-# 	output_handler
-# End time: 17:29:21 on Jun 06,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/alu8.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:21 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/alu8.sv 
-# -- Compiling module alu8
-# 
-# Top level modules:
-# 	alu8
-# End time: 17:29:22 on Jun 06,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv ../src/shift_unit.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:22 on Jun 06,2026
-# vlog -reportprogress 300 -sv ../src/shift_unit.sv 
+# Start time: 17:55:04 on Jun 06,2026
+# vlog -reportprogress 300 -sv shift_unit.sv 
 # -- Compiling module shift_unit
 # 
 # Top level modules:
 # 	shift_unit
-# End time: 17:29:22 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv display_hex.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 17:55:04 on Jun 06,2026
+# vlog -reportprogress 300 -sv display_hex.sv 
+# -- Compiling module display_hex
+# 
+# Top level modules:
+# 	display_hex
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv output_handler.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 17:55:04 on Jun 06,2026
+# vlog -reportprogress 300 -sv output_handler.sv 
+# -- Compiling module output_handler
+# 
+# Top level modules:
+# 	output_handler
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv alu8.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 17:55:04 on Jun 06,2026
+# vlog -reportprogress 300 -sv alu8.sv 
+# -- Compiling module alu8
+# 
+# Top level modules:
+# 	alu8
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv alu8_tb.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
-# Start time: 17:29:22 on Jun 06,2026
+# Start time: 17:55:04 on Jun 06,2026
 # vlog -reportprogress 300 -sv alu8_tb.sv 
 # -- Compiling module alu8_tb
 # 
 # Top level modules:
 # 	alu8_tb
-# End time: 17:29:22 on Jun 06,2026, Elapsed time: 0:00:00
+# End time: 17:55:04 on Jun 06,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -voptargs=+acc work.alu8_tb
-# End time: 17:29:32 on Jun 06,2026, Elapsed time: 0:05:17
-# Errors: 1, Warnings: 0
 # vsim -voptargs="+acc" work.alu8_tb 
-# Start time: 17:29:32 on Jun 06,2026
+# Start time: 17:55:04 on Jun 06,2026
 # Loading sv_std.std
 # Loading work.alu8_tb
 # Loading work.alu8
@@ -314,6 +174,11 @@ do run_alu8.do
 # 
 # add wave -divider "ALU Inputs"
 # add wave -radix hexadecimal sim:/alu8_tb/a
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: User  Hostname: LAPTOP-66SAHT8O  ProcessID: 4560
+#           Attempting to use alternate WLF file "./wlfthkf1g2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthkf1g2
 # add wave -radix hexadecimal sim:/alu8_tb/b
 # add wave -radix binary sim:/alu8_tb/opcode
 # add wave sim:/alu8_tb/enable
@@ -363,4 +228,11 @@ do run_alu8.do
 # 0 ps
 # 168 ns
 # transcript off
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/User/Downloads/8-bit-alu-project-code-only (1)/sim/wave.do}
+# ** Error: ¾¾·Î¡ K]ØL
+#        Unable to replace existing ini file (C:/Users/Aiden Huang/Documents/Codex/2026-06-06/git-aidenhuang04-web-8-bit-alu/work/8-bit-alu/ final project.mpf).  File can not be renamed.
+# ** Error: ¾¾·Î¡ uL
+#        Unable to replace existing ini file (C:/Users/Aiden Huang/Documents/Codex/2026-06-06/git-aidenhuang04-web-8-bit-alu/work/8-bit-alu/ final project.mpf).  File can not be renamed.
+# ** Error: ¾¾·Î¡ K(a
+#        Unable to replace existing ini file (C:/Users/Aiden Huang/Documents/Codex/2026-06-06/git-aidenhuang04-web-8-bit-alu/work/8-bit-alu/ final project.mpf).  File can not be renamed.
+# End time: 20:36:33 on Jun 06,2026, Elapsed time: 2:41:29
+# Errors: 3, Warnings: 5

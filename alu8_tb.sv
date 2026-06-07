@@ -10,7 +10,7 @@ module alu8_tb;
 
     logic [7:0] a;
     logic [7:0] b;
-    logic [2:0] opcode;
+    logic [3:0] opcode;
     logic       enable;
     logic       reset_n;
     logic [7:0] result;
@@ -37,7 +37,7 @@ module alu8_tb;
         input string      name,
         input logic [7:0] test_a,
         input logic [7:0] test_b,
-        input logic [2:0] test_opcode,
+        input logic [3:0] test_opcode,
         input logic       test_enable,
         input logic       test_reset_n,
         input logic [7:0] expected_result,
@@ -73,25 +73,27 @@ module alu8_tb;
 
         a = 8'h00;
         b = 8'h00;
-        opcode = 3'b000;
+        opcode = 4'b0000;
         enable = 1'b0;
         reset_n = 1'b0;
         #10;
 
-        check_case("reset active",    8'h55, 8'haa, 3'b010, 1'b1, 1'b0, 8'h00, 1'b0, 1'b0);
-        check_case("enable low",      8'h55, 8'haa, 3'b010, 1'b0, 1'b1, 8'h00, 1'b0, 1'b0);
-        check_case("add basic",       8'h12, 8'h34, 3'b000, 1'b1, 1'b1, 8'h46, 1'b0, 1'b0);
-        check_case("add carry",       8'hff, 8'h01, 3'b000, 1'b1, 1'b1, 8'h00, 1'b1, 1'b0);
-        check_case("add overflow",    8'h7f, 8'h01, 3'b000, 1'b1, 1'b1, 8'h80, 1'b0, 1'b1);
-        check_case("sub basic",       8'h20, 8'h05, 3'b001, 1'b1, 1'b1, 8'h1b, 1'b1, 1'b0);
-        check_case("sub borrow",      8'h05, 8'h20, 3'b001, 1'b1, 1'b1, 8'he5, 1'b0, 1'b0);
-        check_case("sub overflow",    8'h80, 8'h01, 3'b001, 1'b1, 1'b1, 8'h7f, 1'b1, 1'b1);
-        check_case("and operation",   8'hf0, 8'h3c, 3'b010, 1'b1, 1'b1, 8'h30, 1'b0, 1'b0);
-        check_case("or operation",    8'hf0, 8'h3c, 3'b011, 1'b1, 1'b1, 8'hfc, 1'b0, 1'b0);
-        check_case("xor operation",   8'hf0, 8'h3c, 3'b100, 1'b1, 1'b1, 8'hcc, 1'b0, 1'b0);
-        check_case("pass operand a",  8'h5a, 8'hc3, 3'b101, 1'b1, 1'b1, 8'h5a, 1'b0, 1'b0);
-        check_case("not operand a",   8'h0f, 8'h00, 3'b110, 1'b1, 1'b1, 8'hf0, 1'b0, 1'b0);
-        check_case("shift left",      8'h01, 8'h00, 3'b111, 1'b1, 1'b1, 8'h02, 1'b0, 1'b0);
+        check_case("reset active",    8'h55, 8'haa, 4'b0010, 1'b1, 1'b0, 8'h00, 1'b0, 1'b0);
+        check_case("enable low",      8'h55, 8'haa, 4'b0010, 1'b0, 1'b1, 8'h00, 1'b0, 1'b0);
+        check_case("add basic",       8'h12, 8'h34, 4'b0000, 1'b1, 1'b1, 8'h46, 1'b0, 1'b0);
+        check_case("add carry",       8'hff, 8'h01, 4'b0000, 1'b1, 1'b1, 8'h00, 1'b1, 1'b0);
+        check_case("add overflow",    8'h7f, 8'h01, 4'b0000, 1'b1, 1'b1, 8'h80, 1'b0, 1'b1);
+        check_case("sub basic",       8'h20, 8'h05, 4'b0001, 1'b1, 1'b1, 8'h1b, 1'b1, 1'b0);
+        check_case("sub borrow",      8'h05, 8'h20, 4'b0001, 1'b1, 1'b1, 8'he5, 1'b0, 1'b0);
+        check_case("sub overflow",    8'h80, 8'h01, 4'b0001, 1'b1, 1'b1, 8'h7f, 1'b1, 1'b1);
+        check_case("and operation",   8'hf0, 8'h3c, 4'b0010, 1'b1, 1'b1, 8'h30, 1'b0, 1'b0);
+        check_case("pass operand a",  8'h5a, 8'hc3, 4'b0011, 1'b1, 1'b1, 8'h5a, 1'b0, 1'b0);
+        check_case("pass operand b",  8'h5a, 8'hc3, 4'b0100, 1'b1, 1'b1, 8'hc3, 1'b0, 1'b0);
+        check_case("xor operation",   8'hf0, 8'h3c, 4'b0101, 1'b1, 1'b1, 8'hcc, 1'b0, 1'b0);
+        check_case("or operation",    8'hf0, 8'h3c, 4'b0110, 1'b1, 1'b1, 8'hfc, 1'b0, 1'b0);
+        check_case("not operand a",   8'h0f, 8'h00, 4'b0111, 1'b1, 1'b1, 8'hf0, 1'b0, 1'b0);
+        check_case("shift left",      8'h01, 8'h00, 4'b1000, 1'b1, 1'b1, 8'h02, 1'b0, 1'b0);
+        check_case("shift right",     8'h80, 8'h01, 4'b1000, 1'b1, 1'b1, 8'h40, 1'b0, 1'b0);
 
         if (tests_failed == 0) begin
             $display("All %0d ALU tests passed.", tests_run);

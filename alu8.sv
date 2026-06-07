@@ -7,7 +7,7 @@
 module alu8 (
     input  logic [7:0] a,
     input  logic [7:0] b,
-    input  logic [2:0] opcode,
+    input  logic [3:0] opcode,
     input  logic       enable,
     input  logic       reset_n,
     output logic [7:0] result,

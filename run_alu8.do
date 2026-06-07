@@ -6,16 +6,16 @@ if {[file exists work]} {
 }
 
 vlib work
-vlog -sv ../src/opcode_decoder.sv
-vlog -sv ../src/and_op.sv
-vlog -sv ../src/or_op.sv
-vlog -sv ../src/xor_op.sv
-vlog -sv ../src/not_a_op.sv
-vlog -sv ../src/add_sub_unit.sv
-vlog -sv ../src/display_hex.sv
-vlog -sv ../src/output_handler.sv
-vlog -sv ../src/alu8.sv
-vlog -sv ../src/shift_unit.sv
+vlog -sv opcode_decoder.sv
+vlog -sv and_op.sv
+vlog -sv or_op.sv
+vlog -sv xor_op.sv
+vlog -sv not_a_op.sv
+vlog -sv add_sub_unit.sv
+vlog -sv shift_unit.sv
+vlog -sv display_hex.sv
+vlog -sv output_handler.sv
+vlog -sv alu8.sv
 vlog -sv alu8_tb.sv
 
 vsim -voptargs=+acc work.alu8_tb
@@ -42,6 +42,7 @@ add wave sim:/alu8_tb/dut/sel_xor
 add wave sim:/alu8_tb/dut/sel_pass_a
 add wave sim:/alu8_tb/dut/sel_pass_b
 add wave sim:/alu8_tb/dut/sel_not_a
+add wave sim:/alu8_tb/dut/sel_shift
 
 configure wave -namecolwidth 180
 configure wave -valuecolwidth 100
